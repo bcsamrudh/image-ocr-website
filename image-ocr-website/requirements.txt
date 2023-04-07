@@ -1,0 +1,4 @@
+pip install Flask
+pip install pytesseract
+pip install googletrans
+pip install opencv-python

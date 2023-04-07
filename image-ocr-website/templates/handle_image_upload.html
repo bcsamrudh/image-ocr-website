@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Image OCR {% endblock %}
+{% block content %}
+<form method='post' action='{{ url_for("image_ocr", img=img) }}' enctype="multipart/form-data">
+<div class="container">
+    <img src="{{img}}"><br>
+    <button type="submit" class="btn btn-primary">Extract Text</button>
+</div>
+</form>
+{% endblock %}

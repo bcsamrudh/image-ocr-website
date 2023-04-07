@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Image OCR {% endblock %}
+{% block content %}
+<div class="container">
+    {% if text %}
+    <p>{{text}}</p>
+    {% endif %}
+    {% comment %} <label for="languages">Choose a Language</label><br>
+    <select name="languages" id="languages" style="max-width:90%;">
+        {% for lang,code in languages.items()%}
+        <option value="{{ code }}">{{ lang }}</option>
+        {% endfor %}
+    </select><br>
+    <button type="submit" class="btn btn-primary">Translate Text</button> {% endcomment %}
+</div>
+{% endblock %}
