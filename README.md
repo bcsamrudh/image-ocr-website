@@ -49,10 +49,15 @@ To use the application, follow these steps:
 
 1. Open your web browser and go to `http://localhost:5000/` to access the application.
 2. Click on the "Choose File" button to select an image from your computer.
+![sample1](https://user-images.githubusercontent.com/114090255/230650004-04a142d9-ac95-4b33-833c-5d2e9fbff4ef.png)
 3. Click on the "Upload" button to upload the selected image to the server.
 4. The uploaded image will be displayed on the page.
+![sample2](https://user-images.githubusercontent.com/114090255/230650046-605ceb9d-9fce-4be4-a08b-a19c84c3c7bb.png)
+
 5. Click on the "Extract Text" button to extract the text from the uploaded image.
 6. The extracted text will be displayed on the page.
+![sample3](https://user-images.githubusercontent.com/114090255/230650067-2bff98b9-8bb5-4af3-b900-749c57a86235.png)
+
 
 ## Technologies Used
 
