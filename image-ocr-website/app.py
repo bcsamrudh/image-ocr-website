@@ -1,4 +1,4 @@
-from flask import Flask,render_template,url_for,request,redirect
+from flask import Flask,render_template,url_for,request,redirect,flash
 from werkzeug.utils import secure_filename
 from image_ocr import translate_text,extract_text,LANGUAGES
 import os
@@ -6,6 +6,8 @@ import os
 
 
 app=Flask(__name__)
+app.config['SECRET_KEY'] ="h56kj90kdmnfj"
+#random strings and numbers
 
 upload_folder = os.path.join('static', 'uploads')
 app.config['UPLOAD'] = upload_folder
@@ -20,11 +22,15 @@ def home_page():
 def handle_uploaded_image():
     if request.method=="POST":
         file=request.files['file']
-        if file:
+        ext = os.path.splitext(file.filename)[1]
+        allowed_extensions = ['.jpg', '.png', '.jpeg']
+        if file and ext in allowed_extensions:
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD'], filename))
             img = os.path.join(app.config['UPLOAD'], filename)
             return render_template('handle_image_upload.html',img=img)
+        else:
+            flash("Please Upload Only Image Files! ")
     return redirect(url_for('home_page'))
 
 
