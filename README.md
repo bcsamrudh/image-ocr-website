@@ -49,7 +49,8 @@ To use the application, follow these steps:
 
 1. Open your web browser and go to `http://localhost:5000/` to access the application.
 2. Click on the "Choose File" button to select an image from your computer.
-![sample1](https://user-images.githubusercontent.com/114090255/230650004-04a142d9-ac95-4b33-833c-5d2e9fbff4ef.png)
+3. An Error is displayed when filetypes other than Images are Uploaded!
+![sample1](https://user-images.githubusercontent.com/114090255/230768462-571cba97-d63d-4b70-9dc7-48650364bacd.png)
 3. Click on the "Upload" button to upload the selected image to the server.
 4. The uploaded image will be displayed on the page.
 ![sample2](https://user-images.githubusercontent.com/114090255/230650046-605ceb9d-9fce-4be4-a08b-a19c84c3c7bb.png)
