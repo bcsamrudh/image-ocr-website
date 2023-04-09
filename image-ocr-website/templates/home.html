@@ -3,18 +3,29 @@
 {% block content %}
 <h1> Upload An Image</h1>
 <form method='post' action='{{ url_for("handle_uploaded_image")}}' enctype="multipart/form-data">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
     <div class="container">
         <div class="form-group">
-            <input type="file" class="form-control-file" name="file" required>
+            <input type="file" class="form-control-file"  accept="image/x-png,image/jpg,image/jpeg" name="file" required>
         </div>
         <button type="submit" class="btn btn-primary">Upload</button>
     </div>
-    <style>
+</form>
+<style>
     .container{
         width: 500px;
         height: 250px;
         margin: 50px;
     }
-   </style>
-</form>
+    ul{
+        color: red }
+</style>
 {% endblock %}
